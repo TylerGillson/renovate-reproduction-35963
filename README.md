@@ -17,7 +17,31 @@ WARN: Custom registries are not allowed for this datasource and will be ignored
 
 ## Expected behavior
 
-No warning should be produced.
+Either no warning should be produced or Renovate should correctly identify the package when no `registryUrls` are defined in the package rule.
+
+Note that the following warning is produced when no `registryUrls` are defined:
+
+```json
+{
+  "currentValue": "v2.23.4",
+  "datasource": "go",
+  "depName": "github.com/onsi/ginkgo/v2",
+  "depType": "require",
+  "managerData": {
+    "lineNumber": 7,
+    "multiLine": true
+  },
+  "packageName": "github.com/onsi/ginkgo/v2",
+  "versioning": "semver",
+  "warnings": [
+    {
+      "topic": "github.com/onsi/ginkgo/v2",
+      "message": "Failed to look up go package github.com/onsi/ginkgo/v2"
+    }
+  ],
+  "updates": []
+}
+```
 
 ## Link to the Renovate issue or Discussion
 
