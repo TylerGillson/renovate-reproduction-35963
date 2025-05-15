@@ -1,1 +1,10 @@
-{}
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "packageRules": [
+    {
+      "matchManagers": ["gomod"],
+      "matchPackagePatterns": ["^github.com/onsi/ginkgo"],
+      "registryUrls": ["https://github.com/onsi/ginkgo"]
+    }
+  ]
+}

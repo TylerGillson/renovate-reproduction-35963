@@ -1,17 +1,24 @@
-# minimal-reproduction-template
-
-First, read the [Renovate minimal reproduction instructions](https://github.com/renovatebot/renovate/blob/main/docs/development/minimal-reproductions.md).
-
-Then replace the current `h1` with the Renovate Issue/Discussion number.
+# 35963
 
 ## Current behavior
 
-Explain the current behavior here.
+The following warning is being produced:
+
+```shell
+WARN: Custom registries are not allowed for this datasource and will be ignored
+{
+  "datasource": "go"
+  "registryUrls": [
+    "https://github.com/onsi/ginkgo"
+  ]
+  "defaultRegistryUrls": null
+}
+```
 
 ## Expected behavior
 
-Explain the expected behavior here.
+No warning should be produced.
 
 ## Link to the Renovate issue or Discussion
 
-Put your link to the Renovate issue or Discussion here.
+https://github.com/renovatebot/renovate/discussions/35963
